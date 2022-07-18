@@ -2,6 +2,22 @@
 [![Coverage Status](https://coveralls.io/repos/github/temporalio/temporal/badge.svg?branch=master)](https://coveralls.io/github/temporalio/temporal?branch=master)
 [![Discourse](https://img.shields.io/static/v1?label=Discourse&message=Get%20Help&color=informational)](https://community.temporal.io)
 
+# How to run server manually from local with scylla
+1. start dependencies for scylla database
+   ```
+    $ make start-scy-dependencies
+   ```
+2. SCHEMA initialization
+   ```
+    $ make install-schema
+    $ make install-schema-es
+   ```
+3. Compile and run server binary
+   ```
+   $ make temporal-server
+   $ make start-es
+   ```
+   
 # Temporal  
 
 Temporal is a microservice orchestration platform which enables developers to build scalable applications without sacrificing productivity or reliability.
